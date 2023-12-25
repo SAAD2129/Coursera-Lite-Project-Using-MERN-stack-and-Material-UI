@@ -1,0 +1,31 @@
+FRONTEND
+
+pages
+
+courses + search and component course 
+login -> email or username and password
+signup -> fields = email password username isSubscribed playlists
+contact
+home 
+about
+video + playlist
+profile
+update profile = email is read only change name or password / photo 
+subscription page
+
+
+
+admin
+home + all statistics
+create course
+course/lectures
+courses
+users
+
+
+BACKEND
+course crud url /api/v2/course
+courses crud url /api/v2/course/courses
+lecture crud url /api/v2/lecture
+user  url /api/v1/f
+playlist url /api/v3/playlist crud
