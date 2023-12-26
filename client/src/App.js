@@ -20,6 +20,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AdminCourses from './components/AdminComponents/Courses';
 import Users from './components/AdminComponents/Users';
 import CreateCourseForm from './components/AdminComponents/CreateCourseForm.jsx';
+import Lectures from './components/AdminComponents/Lectures.jsx';
 function App() {
   // const {theme} = useGlobalContext()
   return (
@@ -51,6 +52,7 @@ function App() {
             <Route path="/admin/users" element={<Users />} />
             <Route path="/admin/courses" element={<AdminCourses />} />
             <Route path="/admin/course" element={<CreateCourseForm />} />
+            <Route path="/admin/course/lectures/:id" element={<Lectures />} />
             <Route path="/*" element={<NotFound />} />
 
           </Routes>

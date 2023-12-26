@@ -21,11 +21,11 @@ const LectureSchema = new mongoose.Schema({
     thumbnail: {
         public_id: {
             type: String,
-            required: true,
+            // required: true,
         },
         secure_url: {
             type: String,
-            required: true,
+            // required: true,
         },
     },
     views: {

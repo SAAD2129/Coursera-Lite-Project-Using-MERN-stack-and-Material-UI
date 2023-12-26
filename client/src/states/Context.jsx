@@ -52,14 +52,12 @@ export const AppProvider = ({ children }) => {
       },
     });
     const data = await response.json();
+    console.log(data);
     if (data.success) {
       setLectures(data.lectures);
     } else {
-      setAlert(true);
-      setAlertMsg(data.message);
-      setAlertType("error");
+      toast.error(data.message);
     }
-    disableAlert();
   };
   // CRUD OPERATIONS for course @params id
   const deleteCourse = async (id) => {

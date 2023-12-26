@@ -6,7 +6,8 @@ import User from "../models/User.js"
 export const addLecture = async (req, res) => {
 
     try {
-        const id = req.body.courseId;
+        const id = req.header('course-id')
+        req.body.courseId = id
         const lecture = await Lecture.create(req.body);
         if (!lecture)
             return res.json({ success: false, message: "some error occurred while adding lecture", })

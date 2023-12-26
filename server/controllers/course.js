@@ -1,4 +1,5 @@
 import Course from "../models/Course.js"
+import Lecture from "../models/Lecture.js";
 
 export const addCourse = async (req, res) => {
 
@@ -59,6 +60,7 @@ export const deleteCourse = async (req, res) => {
         const course = await Course.findByIdAndDelete(id);
         if (!course)
             return res.status(404).json({ success: false, message: "course not found invalid id", })
+        await Lecture.deleteMany({ courseId: id })
         return res.json({ success: true, message: "Course deleted successfully", course })
     } catch (error) {
         return res.json({ success: false, message: error.message })
